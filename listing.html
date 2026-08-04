@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://www.goa.sanctify.biz/listings/sanctify-digital-marketing-agency-goa">
 <meta property="og:description" content="Digital marketing agency in Goa — SEO, PPC, social media, web design & branding.">
 <meta property="og:image" content="https://www.goa.sanctify.biz/images/product_item/sanctify-digital-marketing-agency-goa.jpg">
+<meta name="theme-color" content="#e37b00">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +61,7 @@
 
 <div class="detail-hero">
   <div class="container">
-    <nav class="crumb" style="color:#cfe9e1">
+    <nav class="crumb" aria-label="Breadcrumb">
       <a href="index.html">Home</a><span class="sep">/</span>
       <a href="category.html">Marketing Agency</a><span class="sep">/</span>
       <span>Sanctify</span>
@@ -73,7 +74,23 @@
 
     <!-- MAIN -->
     <main>
-      <div class="gallery">S</div>
+      <div class="gallery" id="gallery">
+        <div class="gstage" id="gstage" role="button" tabindex="0" aria-label="Open image in full screen">
+          <figure class="gslide gs-a is-active" data-cls="gs-a"><span class="glabel"><svg class="ic"><use href="assets/sprite.svg#i-sparkles"/></svg><span>Sanctify</span><small>Digital Marketing Agency</small></span></figure>
+          <figure class="gslide gs-b" data-cls="gs-b"><span class="glabel"><svg class="ic"><use href="assets/sprite.svg#i-trending-up"/></svg><span>SEO &amp; Ads</span><small>Rank higher on Google</small></span></figure>
+          <figure class="gslide gs-c" data-cls="gs-c"><span class="glabel"><svg class="ic"><use href="assets/sprite.svg#i-globe"/></svg><span>Web Design</span><small>Fast, modern websites</small></span></figure>
+          <figure class="gslide gs-d" data-cls="gs-d"><span class="glabel"><svg class="ic"><use href="assets/sprite.svg#i-share-2"/></svg><span>Social Media</span><small>Content &amp; branding</small></span></figure>
+          <button class="gnav prev" type="button" aria-label="Previous image"><svg class="ic"><use href="assets/sprite.svg#i-chevron-left"/></svg></button>
+          <button class="gnav next" type="button" aria-label="Next image"><svg class="ic"><use href="assets/sprite.svg#i-chevron-right"/></svg></button>
+          <button class="gexpand" type="button" aria-label="View full size"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-maximize"/></svg></button>
+        </div>
+        <div class="gthumbs" id="gthumbs">
+          <button class="gthumb gs-a is-active" type="button" data-i="0" aria-label="Show image 1"><svg class="ic"><use href="assets/sprite.svg#i-sparkles"/></svg></button>
+          <button class="gthumb gs-b" type="button" data-i="1" aria-label="Show image 2"><svg class="ic"><use href="assets/sprite.svg#i-trending-up"/></svg></button>
+          <button class="gthumb gs-c" type="button" data-i="2" aria-label="Show image 3"><svg class="ic"><use href="assets/sprite.svg#i-globe"/></svg></button>
+          <button class="gthumb gs-d" type="button" data-i="3" aria-label="Show image 4"><svg class="ic"><use href="assets/sprite.svg#i-share-2"/></svg></button>
+        </div>
+      </div>
       <div class="panel">
         <div class="ltitle">
           <div>
@@ -115,7 +132,51 @@
         </div>
       </div>
 
-      <!-- Reviews -->
+      <!-- FAQ -->
+      <div class="panel" style="margin-top:24px">
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:16px">Frequently asked questions</h2>
+        <details class="faq" open><summary>What services does Sanctify offer in Goa? <svg class="ic"><use href="assets/sprite.svg#i-chevron-down"/></svg></summary><div class="ans">Sanctify offers SEO, Google &amp; Meta ads, social media management, web design, content and branding for businesses across Goa.</div></details>
+        <details class="faq"><summary>Where is Sanctify located? <svg class="ic"><use href="assets/sprite.svg#i-chevron-down"/></svg></summary><div class="ans">Sanctify is based in Zuarinagar, Dabolim and serves clients across Vasco, Margao, Panaji and all of Goa.</div></details>
+        <details class="faq"><summary>How do I get a quote? <svg class="ic"><use href="assets/sprite.svg#i-chevron-down"/></svg></summary><div class="ans">Call +91 99233 52923 or message on WhatsApp for a free consultation and custom quote.</div></details>
+      </div>
+
+      <!-- Related tags (internal linking) -->
+      <div class="panel" style="margin-top:24px">
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:6px">Related searches &amp; categories</h2>
+        <p style="color:var(--muted);margin-bottom:18px;font-size:14.5px">Explore related businesses and popular searches across Goa.</p>
+        <div class="tag-group">
+          <h3>Related categories</h3>
+          <div class="tag-cloud">
+            <a href="category.html">Digital Marketing Agencies in Goa</a>
+            <a href="category.html">SEO Companies in Goa</a>
+            <a href="category.html">Web Designers in Goa</a>
+            <a href="category.html">Social Media Marketing Goa</a>
+            <a href="category.html">Advertising Agencies Goa</a>
+            <a href="category.html">Graphic Designers in Goa</a>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Popular areas</h3>
+          <div class="tag-cloud">
+            <a href="category.html"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Vasco da Gama</a>
+            <a href="category.html"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Margao</a>
+            <a href="category.html"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Panaji</a>
+            <a href="category.html"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Mapusa</a>
+            <a href="category.html"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Ponda</a>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Related businesses</h3>
+          <div class="tag-cloud">
+            <a href="listing.html">S Nizami — Interior</a>
+            <a href="listing.html">Mati Cafe — Candolim</a>
+            <a href="listing.html">Ria's Beauty Parlour</a>
+            <a href="listing.html">Shubham Enterprises</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews (after FAQ) -->
       <div class="panel" style="margin-top:24px">
         <h2 style="font-size:22px;font-weight:800;margin-bottom:16px">Customer reviews</h2>
         <div class="review">
@@ -127,14 +188,6 @@
           <p style="color:var(--muted)">Professional, responsive and creative. They redesigned our website and it looks fantastic on mobile.</p>
         </div>
         <a href="#" class="btn btn-ghost btn-sm" style="margin-top:6px">Write a review</a>
-      </div>
-
-      <!-- FAQ -->
-      <div class="panel" style="margin-top:24px">
-        <h2 style="font-size:22px;font-weight:800;margin-bottom:16px">Frequently asked questions</h2>
-        <details class="faq" open><summary>What services does Sanctify offer in Goa? <svg class="ic"><use href="assets/sprite.svg#i-chevron-down"/></svg></summary><div class="ans">Sanctify offers SEO, Google &amp; Meta ads, social media management, web design, content and branding for businesses across Goa.</div></details>
-        <details class="faq"><summary>Where is Sanctify located? <svg class="ic"><use href="assets/sprite.svg#i-chevron-down"/></svg></summary><div class="ans">Sanctify is based in Zuarinagar, Dabolim and serves clients across Vasco, Margao, Panaji and all of Goa.</div></details>
-        <details class="faq"><summary>How do I get a quote? <svg class="ic"><use href="assets/sprite.svg#i-chevron-down"/></svg></summary><div class="ans">Call +91 99233 52923 or message on WhatsApp for a free consultation and custom quote.</div></details>
       </div>
     </main>
 
@@ -155,31 +208,123 @@
 
         <div class="map-embed"><svg class="ic ic-lg"><use href="assets/sprite.svg#i-map-pin"/></svg> &nbsp;Map preview</div>
       </div>
+
+      <!-- Business Hours -->
+      <div class="panel" style="margin-top:20px">
+        <h2 class="side-title"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-clock"/></svg> Business Hours</h2>
+        <div class="hours">
+          <div class="hours-row"><span>Monday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Tuesday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Wednesday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Thursday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Friday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Saturday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Sunday</span><span class="closed">Closed</span></div>
+        </div>
+      </div>
+
+      <!-- Browse Categories -->
+      <div class="panel" style="margin-top:20px">
+        <h2 class="side-title"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-menu"/></svg> Browse Categories</h2>
+        <nav class="side-cats">
+          <a href="category.html"><span class="l"><span class="ci"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-trending-up"/></svg></span> Marketing Agency</span><svg class="ic ic-sm"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+          <a href="category.html"><span class="l"><span class="ci"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-bed"/></svg></span> Accommodation</span><svg class="ic ic-sm"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+          <a href="category.html"><span class="l"><span class="ci"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-utensils-crossed"/></svg></span> Food &amp; Dining</span><svg class="ic ic-sm"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+          <a href="category.html"><span class="l"><span class="ci"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-scissors"/></svg></span> Spa &amp; Salon</span><svg class="ic ic-sm"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+          <a href="category.html"><span class="l"><span class="ci"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-sofa"/></svg></span> Home &amp; Interior</span><svg class="ic ic-sm"><use href="assets/sprite.svg#i-arrow-right"/></svg></a>
+        </nav>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="panel" style="margin-top:20px">
+        <h2 class="side-title"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-share-2"/></svg> Follow Us</h2>
+        <div class="side-social">
+          <a href="https://www.facebook.com/sanctifygoa" aria-label="Facebook"><svg class="ic"><use href="assets/sprite.svg#b-facebook"/></svg></a>
+          <a href="https://www.instagram.com/sanctifygoa" aria-label="Instagram"><svg class="ic"><use href="assets/sprite.svg#b-instagram"/></svg></a>
+          <a href="https://www.linkedin.com/company/sanctify" aria-label="LinkedIn"><svg class="ic"><use href="assets/sprite.svg#b-linkedin"/></svg></a>
+          <a href="https://www.youtube.com/c/SanctifyGoa" aria-label="YouTube"><svg class="ic"><use href="assets/sprite.svg#b-youtube"/></svg></a>
+          <a href="https://wa.me/919923352923" aria-label="WhatsApp"><svg class="ic"><use href="assets/sprite.svg#b-whatsapp"/></svg></a>
+        </div>
+      </div>
     </aside>
 
   </div>
 </div>
 
-<footer style="margin-top:56px">
+<footer>
   <div class="container">
-    <div class="fcols">
+    <div class="foot-cta">
       <div>
+        <h3>Own a business in Goa? Get discovered.</h3>
+        <p>List on Goa's trusted directory and reach thousands of local customers searching every day.</p>
+      </div>
+      <a href="index.html#list" class="btn btn-light"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-plus"/></svg> Add your business</a>
+    </div>
+    <div class="fcols">
+      <div class="fabout">
         <div class="fbrand"><span class="logo"><svg class="ic"><use href="assets/sprite.svg#i-sparkles"/></svg></span> Goa Directory</div>
-        <p style="font-size:14px;max-width:280px">Goa's #1 local business directory — powered by SANCTIFY. Since 2012.</p>
+        <p>Goa's #1 local business directory — powered by SANCTIFY. Helping people discover trusted businesses across Goa since 2012.</p>
         <div class="soc">
           <a href="https://www.facebook.com/sanctifygoa" aria-label="Facebook"><svg class="ic"><use href="assets/sprite.svg#b-facebook"/></svg></a>
           <a href="https://www.instagram.com/sanctifygoa" aria-label="Instagram"><svg class="ic"><use href="assets/sprite.svg#b-instagram"/></svg></a>
           <a href="https://www.linkedin.com/company/sanctify" aria-label="LinkedIn"><svg class="ic"><use href="assets/sprite.svg#b-linkedin"/></svg></a>
           <a href="https://www.youtube.com/c/SanctifyGoa" aria-label="YouTube"><svg class="ic"><use href="assets/sprite.svg#b-youtube"/></svg></a>
+          <a href="https://wa.me/919923352923" aria-label="WhatsApp"><svg class="ic"><use href="assets/sprite.svg#b-whatsapp"/></svg></a>
         </div>
       </div>
-      <div><h4>Top Categories</h4><a href="category.html">Hotels &amp; Resorts</a><a href="category.html">Restaurants</a><a href="category.html">Salons &amp; Spa</a><a href="category.html">Interior Decorators</a></div>
-      <div><h4>Quick Links</h4><a href="index.html">About Us</a><a href="index.html">Contact</a><a href="index.html#list">Add Your Business</a><a href="index.html">Sitemap</a></div>
-      <div><h4>Get in touch</h4><a href="tel:9923352923"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-phone"/></svg> +91 99233 52923</a><a href="mailto:help@sanctify.in"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-mail"/></svg> help@sanctify.in</a></div>
+      <div>
+        <h4>Top Categories</h4>
+        <a href="category.html">Hotels &amp; Resorts</a>
+        <a href="category.html">Restaurants &amp; Cafés</a>
+        <a href="category.html">Salons &amp; Spa</a>
+        <a href="category.html">Interior Decorators</a>
+        <a href="category.html">Marketing Agencies</a>
+        <a href="category.html">Electricians</a>
+      </div>
+      <div>
+        <h4>Popular Areas</h4>
+        <a href="category.html">Vasco da Gama</a>
+        <a href="category.html">Margao</a>
+        <a href="category.html">Panaji</a>
+        <a href="category.html">Candolim</a>
+        <a href="category.html">Mapusa</a>
+        <a href="category.html">Ponda</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="index.html">About Us</a>
+        <a href="index.html">Contact</a>
+        <a href="index.html#list">Add Your Business</a>
+        <a href="index.html">Blog</a>
+        <a href="index.html">Sitemap</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <div class="fcontact">
+          <a href="tel:9923352923"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-phone"/></svg> +91 99233 52923</a>
+          <a href="https://wa.me/919923352923"><svg class="ic ic-sm"><use href="assets/sprite.svg#b-whatsapp"/></svg> WhatsApp Chat</a>
+          <a href="mailto:help@sanctify.in"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-mail"/></svg> help@sanctify.in</a>
+          <span><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Zuarinagar, Dabolim, Goa 403726</span>
+        </div>
+      </div>
     </div>
-    <div class="fbot"><span>© 2012–<script>document.write(new Date().getFullYear())</script> Sanctify.</span><span>Powered by <a href="https://www.sanctify.in/" style="color:#fff;display:inline">SANCTIFY</a></span></div>
+    <div class="fbot">
+      <span>© 2012–<script>document.write(new Date().getFullYear())</script> Sanctify. All rights reserved.</span>
+      <nav class="fbot-links"><a href="index.html">Privacy Policy</a><a href="index.html">Terms of Use</a><a href="index.html">Sitemap</a></nav>
+      <span>Powered by <a href="https://www.sanctify.in/" class="pw">SANCTIFY</a></span>
+    </div>
   </div>
 </footer>
 
+<!-- Lightbox / full-size gallery viewer -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" type="button" aria-label="Close viewer"><svg class="ic ic-lg"><use href="assets/sprite.svg#i-x"/></svg></button>
+  <button class="lb-nav prev" type="button" aria-label="Previous image"><svg class="ic ic-lg"><use href="assets/sprite.svg#i-chevron-left"/></svg></button>
+  <div class="lb-stage gs-a" id="lbStage"></div>
+  <button class="lb-nav next" type="button" aria-label="Next image"><svg class="ic ic-lg"><use href="assets/sprite.svg#i-chevron-right"/></svg></button>
+  <span class="lb-count" id="lbCount">1 / 4</span>
+</div>
+
+<script src="assets/app.js"></script>
 </body>
 </html>
