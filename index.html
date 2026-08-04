@@ -22,7 +22,8 @@
 <meta name="geo.placename" content="Goa">
 <meta name="geo.position" content="15.350319;74.101782">
 <meta name="ICBM" content="15.350319, 74.101782">
-<meta name="theme-color" content="#e37b00">
+<meta name="theme-color" content="#2563eb">
+<script>(function(){try{var t=localStorage.getItem("goa-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,9 +80,9 @@
 
     <form class="search" action="#" method="get" role="search">
       <label class="field"><svg class="ic"><use href="assets/sprite.svg#i-search"/></svg>
-        <input type="text" name="q" placeholder="What are you looking for? e.g. Beauty parlour"></label>
+        <input type="text" id="q" name="q" autocomplete="off" placeholder="What are you looking for? e.g. Beauty parlour"></label>
       <label class="field"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg>
-        <input type="text" name="loc" placeholder="Location — Vasco, Margao…"></label>
+        <input type="text" id="loc" name="loc" autocomplete="off" placeholder="Location — Vasco, Margao…"></label>
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
 
@@ -98,7 +99,7 @@
       <div><b>20+</b><span>Categories</span></div>
       <div><b>60+</b><span>Sub-categories</span></div>
       <div><b>13+</b><span>Years in Goa</span></div>
-      <div><b>All Goa</b><span>North &amp; South</span></div>
+      <div><b>Goa</b><span>North &amp; South</span></div>
     </div>
   </div>
 </div>
@@ -122,6 +123,9 @@
       <a class="cat" href="category.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-graduation-cap"/></svg></span><h3>Education</h3><span>Pre-schools · Art · Music</span></a>
       <a class="cat" href="category.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-dumbbell"/></svg></span><h3>Fitness</h3><span>Health Club · Swimming</span></a>
       <a class="cat" href="category.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-hammer"/></svg></span><h3>Hardware</h3><span>Hardware shops &amp; tools</span></a>
+      <a class="cat" href="category.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-heart"/></svg></span><h3>Healthcare</h3><span>Hospitals · Clinics · Pharmacy</span></a>
+      <a class="cat" href="category.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-building"/></svg></span><h3>Real Estate</h3><span>Property · Rentals · Builders</span></a>
+      <a class="cat" href="category.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-navigation"/></svg></span><h3>Travel &amp; Tourism</h3><span>Tours · Taxis · Rentals</span></a>
     </div>
   </div>
 </section>
@@ -208,6 +212,10 @@
       <a class="cat" href="index.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg></span><h3>Dabolim</h3><span>South Goa</span></a>
       <a class="cat" href="index.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg></span><h3>Panaji</h3><span>North Goa</span></a>
       <a class="cat" href="index.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg></span><h3>Calangute</h3><span>North Goa</span></a>
+      <a class="cat" href="index.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg></span><h3>Mapusa</h3><span>North Goa</span></a>
+      <a class="cat" href="index.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg></span><h3>Anjuna</h3><span>North Goa</span></a>
+      <a class="cat" href="index.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg></span><h3>Ponda</h3><span>South Goa</span></a>
+      <a class="cat" href="index.html"><span class="ci"><svg class="ic"><use href="assets/sprite.svg#i-map-pin"/></svg></span><h3>Colva</h3><span>South Goa</span></a>
     </div>
   </div>
 </section>
