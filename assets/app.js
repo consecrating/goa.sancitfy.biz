@@ -7,6 +7,8 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   /* ============================================================
      THEME SWITCHER
      ============================================================ */
@@ -161,6 +163,47 @@
   if (menuBtn && navLinks) {
     menuBtn.addEventListener("click", function () { navLinks.classList.toggle("show"); });
   }
+
+  /* ============================================================
+     CHIP REVEAL ANIMATION (desktop, on scroll into view)
+     ============================================================ */
+  var revealEls = Array.prototype.slice.call(
+    document.querySelectorAll(".chips, .tag-cloud, #categories .cat-grid, #areas .cat-grid, #featured .cards")
+  );
+  if (revealEls.length) {
+    revealEls.forEach(function (el) {
+      el.classList.add("reveal-seq");
+      Array.prototype.forEach.call(el.children, function (child, i) {
+        child.style.transitionDelay = Math.min(i * 45, 450) + "ms";
+      });
+    });
+    var revealAll = function () { revealEls.forEach(function (el) { el.classList.add("in"); }); };
+    var revealInView = function () {
+      revealEls.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < (window.innerHeight || 800) * 0.9) el.classList.add("in");
+      });
+    };
+    // Paint hidden state, then reveal what's in view (nice on-scroll feel).
+    requestAnimationFrame(function () { requestAnimationFrame(revealInView); });
+    window.addEventListener("scroll", revealInView, { passive: true });
+    // Safety net: nothing stays hidden regardless of scroll/observer support.
+    setTimeout(revealAll, 900);
+  }
+
+  /* ============================================================
+     SCROLL-TO-TOP BUTTON
+     ============================================================ */
+  var toTop = document.createElement("button");
+  toTop.className = "to-top";
+  toTop.type = "button";
+  toTop.setAttribute("aria-label", "Scroll back to top");
+  toTop.innerHTML = '<svg class="ic ic-lg"><use href="assets/sprite.svg#i-chevron-down"/></svg>';
+  document.body.appendChild(toTop);
+  function toggleTop() { toTop.classList.toggle("show", window.pageYOffset > 400); }
+  window.addEventListener("scroll", toggleTop, { passive: true });
+  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+  toggleTop();
 
   /* ============================================================
      GALLERY + LIGHTBOX
