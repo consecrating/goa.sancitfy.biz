@@ -167,12 +167,37 @@
     overlay.className = "nav-overlay";
     document.body.appendChild(overlay);
 
+    // Drawer header (logo)
+    var head = document.createElement("div");
+    head.className = "nav-drawer-head";
+    head.innerHTML = '<span class="dlogo"><svg class="ic ic-lg"><use href="assets/sprite.svg#i-sparkles"/></svg></span> Goa Directory';
+    navLinks.insertBefore(head, navLinks.firstChild);
+
+    // Close button
     var closeBtn = document.createElement("button");
     closeBtn.className = "nav-close";
     closeBtn.type = "button";
     closeBtn.setAttribute("aria-label", "Close menu");
     closeBtn.innerHTML = '<svg class="ic ic-lg"><use href="assets/sprite.svg#i-x"/></svg>';
-    navLinks.insertBefore(closeBtn, navLinks.firstChild);
+    navLinks.appendChild(closeBtn);
+
+    // Drawer footer: contact info + socials + call button
+    var foot = document.createElement("div");
+    foot.className = "nav-drawer-foot";
+    foot.innerHTML =
+      '<h4>Get in touch</h4>' +
+      '<a class="di" href="tel:9923352923"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-phone"/></svg> +91 99233 52923</a>' +
+      '<a class="di" href="mailto:help@sanctify.in"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-mail"/></svg> help@sanctify.in</a>' +
+      '<span class="di"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Zuarinagar, Vasco, Goa 403726</span>' +
+      '<div class="nav-drawer-social">' +
+        '<a href="https://www.facebook.com/sanctifygoa" aria-label="Facebook"><svg class="ic"><use href="assets/sprite.svg#b-facebook"/></svg></a>' +
+        '<a href="https://www.instagram.com/sanctifygoa" aria-label="Instagram"><svg class="ic"><use href="assets/sprite.svg#b-instagram"/></svg></a>' +
+        '<a href="https://www.linkedin.com/company/sanctify" aria-label="LinkedIn"><svg class="ic"><use href="assets/sprite.svg#b-linkedin"/></svg></a>' +
+        '<a href="https://www.youtube.com/c/SanctifyGoa" aria-label="YouTube"><svg class="ic"><use href="assets/sprite.svg#b-youtube"/></svg></a>' +
+        '<a href="https://wa.me/919923352923" aria-label="WhatsApp"><svg class="ic"><use href="assets/sprite.svg#b-whatsapp"/></svg></a>' +
+      '</div>' +
+      '<a class="nav-drawer-call" href="tel:9923352923"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-phone"/></svg> Call +91 99233 52923</a>';
+    navLinks.appendChild(foot);
 
     function openMenu() { navLinks.classList.add("show"); overlay.classList.add("show"); document.body.style.overflow = "hidden"; }
     function closeMenu() { navLinks.classList.remove("show"); overlay.classList.remove("show"); document.body.style.overflow = ""; }
