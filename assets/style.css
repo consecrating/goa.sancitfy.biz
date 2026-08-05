@@ -527,3 +527,11 @@ footer a:hover{color:var(--brand-light)}
   .lb-nav.next{right:8px}
   .lb-close{top:12px;right:12px}
 }
+
+
+
+/* Desktop WhatsApp button (sits before the phone button in the header CTA).
+   Lives inside .nav-cta which is hidden on mobile, so it's desktop-only. */
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa .ic{color:#fff}
+.btn-wa:hover{background:#1ebe57}
