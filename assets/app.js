@@ -170,7 +170,7 @@
     // Drawer header (logo)
     var head = document.createElement("div");
     head.className = "nav-drawer-head";
-    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=18" alt="Goa Directory logo"> Goa Directory';
+    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=19" alt="Goa Directory logo"> Goa Directory';
     navLinks.insertBefore(head, navLinks.firstChild);
 
     // Close button
@@ -230,13 +230,22 @@
   /* ============================================================
      SCROLL-TO-TOP BUTTON
      ============================================================ */
-  /* Mobile sticky action bar — Call + WhatsApp (mobile only, CSS-gated) */
-  var mBar = document.createElement("div");
-  mBar.className = "mobile-bar";
-  mBar.innerHTML =
-    '<a class="mb-call" href="tel:9923352923"><svg class="ic ic-sm"><use href="/assets/sprite.svg#i-phone"/></svg> Call</a>' +
-    '<a class="mb-wa" href="https://wa.me/919923352923" target="_blank" rel="noopener"><svg class="ic ic-sm"><use href="/assets/sprite.svg#b-whatsapp"/></svg> WhatsApp</a>';
-  document.body.appendChild(mBar);
+  /* Mobile sticky action bar — Call + WhatsApp (mobile only, CSS-gated).
+     Not shown on the home page (only on listing/category/inner pages). */
+  var mbPath = location.pathname.replace(/\/index\.html$/i, "/");
+  var mbIsHome = mbPath === "/" || mbPath === "";
+  if (!mbIsHome) {
+    // Numbers are specific to each ad: set data-phone / data-wa on the page's
+    // <body> and the bar uses them. Falls back to the directory number.
+    var mbPhone = (document.body.getAttribute("data-phone") || "9923352923").replace(/\D/g, "");
+    var mbWa = (document.body.getAttribute("data-wa") || ("91" + mbPhone)).replace(/\D/g, "");
+    var mBar = document.createElement("div");
+    mBar.className = "mobile-bar";
+    mBar.innerHTML =
+      '<a class="mb-call" href="tel:' + mbPhone + '"><svg class="ic ic-sm"><use href="/assets/sprite.svg#i-phone"/></svg> Call</a>' +
+      '<a class="mb-wa" href="https://wa.me/' + mbWa + '" target="_blank" rel="noopener"><svg class="ic ic-sm"><use href="/assets/sprite.svg#b-whatsapp"/></svg> WhatsApp</a>';
+    document.body.appendChild(mBar);
+  }
 
   var toTop = document.createElement("button");
   toTop.className = "to-top";
