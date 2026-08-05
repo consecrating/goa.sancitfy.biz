@@ -486,3 +486,9 @@ footer a:hover{color:var(--brand-light)}
 .cat:hover .ci .ic{animation:iconPop .55s ease}
 @keyframes iconPop{0%{transform:scale(1)}45%{transform:scale(1.28) rotate(10deg)}100%{transform:scale(1) rotate(0)}}
 @media(prefers-reduced-motion:reduce){.cat:hover .ci{transform:none}.cat:hover .ci .ic{animation:none}}
+
+
+/* Custom brand logo mark */
+.brandmark{width:42px;height:42px;object-fit:contain;flex:0 0 auto;display:block}
+.fbrand .brandmark{width:38px;height:38px}
+.nav-drawer-head .brandmark{width:34px;height:34px}
