@@ -216,29 +216,8 @@
   /* ============================================================
      CHIP REVEAL ANIMATION (desktop, on scroll into view)
      ============================================================ */
-  var revealEls = Array.prototype.slice.call(
-    document.querySelectorAll(".chips, .tag-cloud, #categories .cat-grid, #areas .cat-grid, #featured .cards")
-  );
-  if (revealEls.length) {
-    revealEls.forEach(function (el) {
-      el.classList.add("reveal-seq");
-      Array.prototype.forEach.call(el.children, function (child, i) {
-        child.style.transitionDelay = Math.min(i * 45, 450) + "ms";
-      });
-    });
-    var revealAll = function () { revealEls.forEach(function (el) { el.classList.add("in"); }); };
-    var revealInView = function () {
-      revealEls.forEach(function (el) {
-        var r = el.getBoundingClientRect();
-        if (r.top < (window.innerHeight || 800) * 0.9) el.classList.add("in");
-      });
-    };
-    // Paint hidden state, then reveal what's in view (nice on-scroll feel).
-    requestAnimationFrame(function () { requestAnimationFrame(revealInView); });
-    window.addEventListener("scroll", revealInView, { passive: true });
-    // Safety net: nothing stays hidden regardless of scroll/observer support.
-    setTimeout(revealAll, 900);
-  }
+  /* Scroll-reveal animation removed: content is always visible for
+     reliability (SEO + no flash of hidden content). */
 
   /* ============================================================
      SCROLL-TO-TOP BUTTON

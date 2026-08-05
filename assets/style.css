@@ -386,10 +386,7 @@ footer a:hover{color:var(--brand-light)}
 .side-cats a,.tag-cloud a,.chip{white-space:nowrap}
 @media(min-width:768px){
   .chips,.tag-cloud{justify-content:center}
-  /* Staggered reveal (stagger delays set inline by JS). Always safe:
-     without .js the content is fully visible. */
-  .js .reveal-seq>*{opacity:0;transform:translateY(16px)}
-  .js .reveal-seq.in>*{opacity:1;transform:none;transition:opacity .5s ease,transform .55s cubic-bezier(.2,.7,.3,1)}
+  /* (scroll-reveal disabled — content always visible) */
 }
 @media(prefers-reduced-motion:reduce){.js .reveal-seq>*{opacity:1 !important;transform:none !important;transition:none !important}}
 
@@ -465,3 +462,7 @@ footer a:hover{color:var(--brand-light)}
 .band-split .band-main{align-self:center}
 .band-split .band-img{max-height:250px;width:auto;flex:0 0 auto;align-self:flex-end;margin-bottom:-46px;object-fit:contain;object-position:bottom}
 @media(max-width:760px){.band-split{align-items:center}.band-split .band-img{max-height:190px;align-self:center;margin-bottom:-32px}}
+
+
+/* Pre-footer CTA section (before the footer, not inside it) */
+.prefooter{padding:24px 0 56px}
