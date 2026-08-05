@@ -554,3 +554,20 @@ footer a:hover{color:var(--brand-light)}
   /* lift the scroll-to-top button above the bar */
   .to-top{bottom:86px}
 }
+
+
+
+/* Listing "Top Rated Agency" review summary bar (total reviews + score) */
+.rev-summary{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:var(--brand-soft);border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin-bottom:18px}
+.rev-score{display:flex;align-items:center;gap:12px}
+.rev-score>b{font-size:38px;font-weight:800;line-height:1;color:var(--ink)}
+.rev-stars{display:flex;align-items:center;gap:8px}
+.rev-stars .stars{display:inline-flex;align-items:center;gap:2px;color:var(--star)}
+.rev-stars .stars svg{width:19px;height:19px;fill:currentColor;display:block}
+.rev-stars .rev-out{color:var(--muted);font-size:13px;font-weight:600}
+.rev-meta{display:flex;flex-direction:column;gap:7px;margin-left:auto;align-items:flex-end}
+.rev-badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line-2);color:var(--brand-dark);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.rev-badge .ic{color:var(--brand)}
+.rev-total{color:var(--muted);font-size:14px}
+.rev-total strong{color:var(--ink);font-size:17px}
+@media(max-width:520px){.rev-summary{gap:14px}.rev-meta{margin-left:0;align-items:flex-start;width:100%}}
