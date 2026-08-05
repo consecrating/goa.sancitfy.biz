@@ -535,3 +535,22 @@ footer a:hover{color:var(--brand-light)}
 .btn-wa{background:#25d366;color:#fff}
 .btn-wa .ic{color:#fff}
 .btn-wa:hover{background:#1ebe57}
+
+
+
+/* Mobile sticky action bar (Call + WhatsApp) — mobile only, like sanctify.co.
+   Injected by app.js; sits below the drawer overlay (z-index 50 < 55) so it
+   hides behind the menu when the drawer is open. */
+.mobile-bar{display:none}
+@media(max-width:820px){
+  .mobile-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -6px 22px rgba(20,24,34,.12)}
+  .mobile-bar a{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 10px;border-radius:14px;font-weight:700;font-size:15px;color:#fff;box-shadow:0 4px 12px rgba(20,24,34,.16);transition:transform .12s,filter .15s}
+  .mobile-bar a:active{transform:scale(.97);filter:brightness(.95)}
+  .mobile-bar a .ic{color:#fff}
+  .mobile-bar .mb-call{background:linear-gradient(120deg,var(--brand),var(--brand-darker))}
+  .mobile-bar .mb-wa{background:#25d366}
+  /* keep the last section clear of the fixed bar */
+  body{padding-bottom:74px}
+  /* lift the scroll-to-top button above the bar */
+  .to-top{bottom:86px}
+}
