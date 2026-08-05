@@ -568,6 +568,9 @@ footer a:hover{color:var(--brand-light)}
 .rev-meta{display:flex;flex-direction:column;gap:7px;margin-left:auto;align-items:flex-end}
 .rev-badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line-2);color:var(--brand-dark);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
 .rev-badge .ic{color:var(--brand)}
-.rev-total{color:var(--muted);font-size:14px}
-.rev-total strong{color:var(--ink);font-size:17px}
+.rev-total{display:inline-flex;align-items:center;gap:5px;color:var(--muted);font-size:14px;font-weight:600;text-decoration:none}
+.rev-total strong{color:var(--brand-dark);font-size:17px}
+.rev-total:hover{color:var(--brand-dark)}
+.rev-total:hover strong{text-decoration:underline}
+.rev-ext{width:14px;height:14px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
 @media(max-width:520px){.rev-summary{gap:14px}.rev-meta{margin-left:0;align-items:flex-start;width:100%}}
