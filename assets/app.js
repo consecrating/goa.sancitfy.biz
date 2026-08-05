@@ -17,7 +17,8 @@
     { id: "v2", name: "Emerald",     sub: "Fresh & natural",     grad: "linear-gradient(135deg,#059669,#34d399)" },
     { id: "v3", name: "Sunset Rose", sub: "Warm & bold",         grad: "linear-gradient(135deg,#e11d48,#f97316)" },
     { id: "v4", name: "Goan Teal",   sub: "Coastal & calm",      grad: "linear-gradient(135deg,#0d9488,#0891b2)" },
-    { id: "v5", name: "Goa Guru",    sub: "blog.goa.guru style", grad: "linear-gradient(135deg,#4f46e5,#7c3aed,#db2777)" }
+    { id: "v5", name: "Goa Guru",    sub: "blog.goa.guru style", grad: "linear-gradient(135deg,#4f46e5,#7c3aed,#db2777)" },
+    { id: "v6", name: "YellowPages", sub: "Bold & familiar",     grad: "linear-gradient(135deg,#f6b800,#ffd24a)" }
   ];
   var STORE = "goa-theme";
 
@@ -50,7 +51,7 @@
     THEMES.forEach(function (t, i) {
       html += '<button class="swatch" type="button" data-id="' + t.id + '">' +
                 '<span class="dot" style="background:' + t.grad + '"></span>' +
-                '<span>Version ' + (i + 1) + ' · ' + t.name + '<small>' + t.sub + '</small></span>' +
+                '<span>' + t.name + '<small>' + t.sub + '</small></span>' +
               '</button>';
     });
     html += "</div>";
