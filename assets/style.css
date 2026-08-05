@@ -330,7 +330,10 @@ footer a:hover{color:var(--brand-light)}
   .nav-cta{display:none}
   .nav-overlay{position:fixed;inset:0;background:rgba(10,12,18,.5);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;z-index:55}
   .nav-overlay.show{opacity:1;visibility:visible}
-  .nav-links{position:fixed;top:0;right:0;height:100vh;height:100dvh;width:min(86vw,340px);flex-direction:column;align-items:stretch;gap:0;background:#fff;box-shadow:-8px 0 40px rgba(0,0,0,.25);padding:0 0 24px;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);z-index:80;overflow-y:auto}
+  .nav-links{position:fixed;top:0;right:0;height:100vh;height:100dvh;width:min(86vw,340px);flex-direction:column;align-items:stretch;gap:0;background:#fff;box-shadow:-8px 0 40px rgba(0,0,0,.25);padding:0 0 24px;transform:translateX(100%);transition:none;z-index:80;overflow-y:auto}
+  /* Enable the slide transition only after first paint (set by app.js) to
+     avoid the drawer flashing open then sliding shut on page load. */
+  html.nav-ready .nav-links{transition:transform .3s cubic-bezier(.4,0,.2,1)}
   .nav-links.show{transform:none}
   .nav-links>a{padding:15px 24px;font-size:16px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink)}
   .nav-links>a:hover{background:var(--brand-soft);color:var(--brand-dark)}

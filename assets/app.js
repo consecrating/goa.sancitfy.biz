@@ -170,7 +170,7 @@
     // Drawer header (logo)
     var head = document.createElement("div");
     head.className = "nav-drawer-head";
-    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=14" alt="Goa Directory logo"> Goa Directory';
+    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=15" alt="Goa Directory logo"> Goa Directory';
     navLinks.insertBefore(head, navLinks.firstChild);
 
     // Close button
@@ -211,6 +211,14 @@
       a.addEventListener("click", closeMenu);
     });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+
+    // Enable the drawer slide transition only AFTER the first paint, so the
+    // menu never flashes open and slides shut when the page loads.
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.documentElement.classList.add("nav-ready");
+      });
+    });
   }
 
   /* ============================================================
