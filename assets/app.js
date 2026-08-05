@@ -43,7 +43,7 @@
     fab.className = "theme-fab";
     fab.type = "button";
     fab.setAttribute("aria-label", "Change theme");
-    fab.innerHTML = '<svg class="ic ic-lg"><use href="assets/sprite.svg#i-palette"/></svg>';
+    fab.innerHTML = '<svg class="ic ic-lg"><use href="/assets/sprite.svg#i-palette"/></svg>';
 
     panel = document.createElement("div");
     panel.className = "theme-panel";
@@ -122,7 +122,7 @@
     function render(matches) {
       if (!matches.length) { box.innerHTML = '<div class="empty">No matches — press Search</div>'; box.classList.add("show"); items = []; return; }
       box.innerHTML = matches.map(function (m) {
-        return '<button type="button"><svg class="ic"><use href="assets/sprite.svg#' + icon + '"/></svg>' + m + "</button>";
+        return '<button type="button"><svg class="ic"><use href="/assets/sprite.svg#' + icon + '"/></svg>' + m + "</button>";
       }).join("");
       items = Array.prototype.slice.call(box.querySelectorAll("button"));
       items.forEach(function (b) {
@@ -170,7 +170,7 @@
     // Drawer header (logo)
     var head = document.createElement("div");
     head.className = "nav-drawer-head";
-    head.innerHTML = '<img class="brandmark" src="assets/logo.png?v=8" alt="Goa Directory logo"> Goa Directory';
+    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=10" alt="Goa Directory logo"> Goa Directory';
     navLinks.insertBefore(head, navLinks.firstChild);
 
     // Close button
@@ -178,7 +178,7 @@
     closeBtn.className = "nav-close";
     closeBtn.type = "button";
     closeBtn.setAttribute("aria-label", "Close menu");
-    closeBtn.innerHTML = '<svg class="ic ic-lg"><use href="assets/sprite.svg#i-x"/></svg>';
+    closeBtn.innerHTML = '<svg class="ic ic-lg"><use href="/assets/sprite.svg#i-x"/></svg>';
     navLinks.appendChild(closeBtn);
 
     // Drawer footer: contact info + socials + call button
@@ -186,17 +186,17 @@
     foot.className = "nav-drawer-foot";
     foot.innerHTML =
       '<h4>Get in touch</h4>' +
-      '<a class="di" href="tel:9923352923"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-phone"/></svg> +91 99233 52923</a>' +
-      '<a class="di" href="mailto:help@sanctify.in"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-mail"/></svg> help@sanctify.in</a>' +
-      '<span class="di"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-map-pin"/></svg> Zuarinagar, Vasco, Goa 403726</span>' +
+      '<a class="di" href="tel:9923352923"><svg class="ic ic-sm"><use href="/assets/sprite.svg#i-phone"/></svg> +91 99233 52923</a>' +
+      '<a class="di" href="mailto:help@sanctify.in"><svg class="ic ic-sm"><use href="/assets/sprite.svg#i-mail"/></svg> help@sanctify.in</a>' +
+      '<span class="di"><svg class="ic ic-sm"><use href="/assets/sprite.svg#i-map-pin"/></svg> Zuarinagar, Vasco, Goa 403726</span>' +
       '<div class="nav-drawer-social">' +
-        '<a href="https://www.facebook.com/sanctifygoa" aria-label="Facebook"><svg class="ic"><use href="assets/sprite.svg#b-facebook"/></svg></a>' +
-        '<a href="https://www.instagram.com/sanctifygoa" aria-label="Instagram"><svg class="ic"><use href="assets/sprite.svg#b-instagram"/></svg></a>' +
-        '<a href="https://www.linkedin.com/company/sanctify" aria-label="LinkedIn"><svg class="ic"><use href="assets/sprite.svg#b-linkedin"/></svg></a>' +
-        '<a href="https://www.youtube.com/c/SanctifyGoa" aria-label="YouTube"><svg class="ic"><use href="assets/sprite.svg#b-youtube"/></svg></a>' +
-        '<a href="https://wa.me/919923352923" aria-label="WhatsApp"><svg class="ic"><use href="assets/sprite.svg#b-whatsapp"/></svg></a>' +
+        '<a href="https://www.facebook.com/sanctifygoa" aria-label="Facebook"><svg class="ic"><use href="/assets/sprite.svg#b-facebook"/></svg></a>' +
+        '<a href="https://www.instagram.com/sanctifygoa" aria-label="Instagram"><svg class="ic"><use href="/assets/sprite.svg#b-instagram"/></svg></a>' +
+        '<a href="https://www.linkedin.com/company/sanctify" aria-label="LinkedIn"><svg class="ic"><use href="/assets/sprite.svg#b-linkedin"/></svg></a>' +
+        '<a href="https://www.youtube.com/c/SanctifyGoa" aria-label="YouTube"><svg class="ic"><use href="/assets/sprite.svg#b-youtube"/></svg></a>' +
+        '<a href="https://wa.me/919923352923" aria-label="WhatsApp"><svg class="ic"><use href="/assets/sprite.svg#b-whatsapp"/></svg></a>' +
       '</div>' +
-      '<a class="nav-drawer-call" href="tel:9923352923"><svg class="ic ic-sm"><use href="assets/sprite.svg#i-phone"/></svg> Call +91 99233 52923</a>';
+      '<a class="nav-drawer-call" href="tel:9923352923"><svg class="ic ic-sm"><use href="/assets/sprite.svg#i-phone"/></svg> Call +91 99233 52923</a>';
     navLinks.appendChild(foot);
 
     function openMenu() { navLinks.classList.add("show"); overlay.classList.add("show"); document.body.style.overflow = "hidden"; }
@@ -226,7 +226,7 @@
   toTop.className = "to-top";
   toTop.type = "button";
   toTop.setAttribute("aria-label", "Scroll back to top");
-  toTop.innerHTML = '<svg class="ic ic-lg"><use href="assets/sprite.svg#i-chevron-down"/></svg>';
+  toTop.innerHTML = '<svg class="ic ic-lg"><use href="/assets/sprite.svg#i-chevron-down"/></svg>';
   document.body.appendChild(toTop);
   function toggleTop() { toTop.classList.toggle("show", window.pageYOffset > 400); }
   window.addEventListener("scroll", toggleTop, { passive: true });

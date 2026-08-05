@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Goa Directory — Logo Options</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--grad:linear-gradient(120deg,#4f46e5,#7c3aed 55%,#db2777)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:#f4f5f8;color:#161a22;padding:32px 16px 60px}
+  .wrap{max-width:1100px;margin:0 auto}
+  h1{font-size:clamp(24px,4vw,34px);font-weight:800;text-align:center}
+  p.sub{text-align:center;color:#5f6672;margin:8px 0 30px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+  .card{background:#fff;border:1px solid #e6e8ee;border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(20,24,34,.06)}
+  .num{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;font-weight:800}
+  .num span{font-size:13px;font-weight:600;color:#5f6672}
+  .tiles{display:grid;grid-template-columns:1fr 1fr}
+  .tile{aspect-ratio:1;display:grid;place-items:center;padding:26px}
+  .tile.grad{background:var(--grad)}
+  .tile.white{background:#fff;border-left:1px solid #eee}
+  .tile img{width:100%;height:100%;object-fit:contain}
+  .hero-demo{margin:34px 0;border-radius:18px;overflow:hidden;border:1px solid #e6e8ee}
+  .hero-head{display:flex;align-items:center;gap:11px;background:#fff;padding:14px 20px;font-weight:800;font-size:20px;border-bottom:1px solid #eee}
+  .hero-head img{width:42px;height:42px;object-fit:contain}
+  .hero-head small{display:block;font-size:10.5px;font-weight:600;color:#5f6672;letter-spacing:1px}
+  .hero-band{background:var(--grad);height:90px}
+  .pick{text-align:center;margin-top:30px;color:#5f6672}
+  .pick b{color:#7c3aed}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Goa Directory — Logo Options</h1>
+  <p class="sub">Each shown on the hero gradient (left) and on white (right). Reply with the number you like.</p>
+  <div class="grid" id="grid"></div>
+
+  <div class="pick">Tell me the <b>number (1–8)</b> and I'll set it as your logo.</div>
+</div>
+<script>
+  var labels=["Pin · Sun/Palm","Pin · 'G'","Pin · Palm leaf","Pin · Compass","Palm + Sun emblem","'G' monogram","Sun + Waves","Compass star"];
+  var g=document.getElementById('grid');
+  for(var i=1;i<=8;i++){
+    g.insertAdjacentHTML('beforeend',
+      '<div class="card"><div class="num">#'+i+'<span>'+labels[i-1]+'</span></div>'+
+      '<div class="tiles"><div class="tile grad"><img src="assets/opt'+i+'.png?v=8" alt="Logo option '+i+'"></div>'+
+      '<div class="tile white"><img src="assets/opt'+i+'.png?v=8" alt="Logo option '+i+' on white"></div></div></div>');
+  }
+</script>
+</body>
+</html>
