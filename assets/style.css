@@ -509,5 +509,5 @@ footer a:hover{color:var(--brand-light)}
 .gthumbs{min-width:0}
 
 
-/* Keep the listing gallery main image compact */
-.gstage{max-height:320px}
+/* Listing gallery main image — full 16:9, just bounded on very large screens */
+.gstage{max-height:460px}
