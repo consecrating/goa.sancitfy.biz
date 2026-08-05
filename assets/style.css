@@ -467,3 +467,14 @@ footer a:hover{color:var(--brand-light)}
 
 /* Pre-footer CTA section (before the footer, not inside it) */
 .prefooter{padding:24px 0 56px}
+
+
+/* Popular tags — fast slide-in from the left, easing to a stop (staggered) */
+@keyframes tagSlideIn{from{opacity:0;transform:translateX(-48px)}to{opacity:1;transform:none}}
+.tags .lbl,.tags a{animation:tagSlideIn .65s cubic-bezier(.16,1,.3,1) both}
+.tags a:nth-of-type(1){animation-delay:.06s}
+.tags a:nth-of-type(2){animation-delay:.14s}
+.tags a:nth-of-type(3){animation-delay:.22s}
+.tags a:nth-of-type(4){animation-delay:.30s}
+.tags a:nth-of-type(5){animation-delay:.38s}
+@media(prefers-reduced-motion:reduce){.tags .lbl,.tags a{animation:none}}
