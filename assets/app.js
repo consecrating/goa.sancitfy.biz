@@ -75,7 +75,8 @@
     });
     markActive();
   }
-  buildSwitcher();
+  /* Theme switcher disabled — site locked to the Goa Guru theme.
+     buildSwitcher(); */
 
   /* ============================================================
      SEARCH TYPEAHEAD (show suggestions after 3+ characters)
