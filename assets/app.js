@@ -18,7 +18,7 @@
     { id: "v3", name: "Sunset Rose", sub: "Warm & bold",         grad: "linear-gradient(135deg,#e11d48,#f97316)" },
     { id: "v4", name: "Goan Teal",   sub: "Coastal & calm",      grad: "linear-gradient(135deg,#0d9488,#0891b2)" },
     { id: "v5", name: "Goa Guru",    sub: "blog.goa.guru style", grad: "linear-gradient(135deg,#4f46e5,#7c3aed,#db2777)" },
-    { id: "v6", name: "YellowPages", sub: "Bold & familiar",     grad: "linear-gradient(135deg,#f6b800,#ffd24a)" }
+    { id: "v6", name: "Amber Gold",  sub: "Warm & vibrant",       grad: "linear-gradient(135deg,#f6b800,#ffd24a)" }
   ];
   var STORE = "goa-theme";
 
@@ -162,7 +162,29 @@
   var menuBtn = document.querySelector(".menu-btn");
   var navLinks = document.querySelector(".nav-links");
   if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", function () { navLinks.classList.toggle("show"); });
+    var overlay = document.createElement("div");
+    overlay.className = "nav-overlay";
+    document.body.appendChild(overlay);
+
+    var closeBtn = document.createElement("button");
+    closeBtn.className = "nav-close";
+    closeBtn.type = "button";
+    closeBtn.setAttribute("aria-label", "Close menu");
+    closeBtn.innerHTML = '<svg class="ic ic-lg"><use href="assets/sprite.svg#i-x"/></svg>';
+    navLinks.insertBefore(closeBtn, navLinks.firstChild);
+
+    function openMenu() { navLinks.classList.add("show"); overlay.classList.add("show"); document.body.style.overflow = "hidden"; }
+    function closeMenu() { navLinks.classList.remove("show"); overlay.classList.remove("show"); document.body.style.overflow = ""; }
+
+    menuBtn.addEventListener("click", function () {
+      if (navLinks.classList.contains("show")) closeMenu(); else openMenu();
+    });
+    closeBtn.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+    Array.prototype.forEach.call(navLinks.querySelectorAll("a"), function (a) {
+      a.addEventListener("click", closeMenu);
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
   }
 
   /* ============================================================
