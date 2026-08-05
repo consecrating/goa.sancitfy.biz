@@ -1,2 +1,5 @@
 # Local pre-deploy backups (not tracked)
 .bak/
+
+# category chrome-swap working files (deployed via FTP, legacy pages not tracked here)
+catwork/
