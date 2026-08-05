@@ -234,6 +234,35 @@
   toggleTop();
 
   /* ============================================================
+     HERO STATS — count-up (meter) animation
+     ============================================================ */
+  var stats = document.querySelectorAll(".hero-stats b");
+  if (stats.length) {
+    var animateStat = function (el) {
+      var m = el.textContent.trim().match(/^(\d+)(.*)$/);
+      if (!m) return; // non-numeric (e.g. "Goa") stays as-is
+      var target = parseInt(m[1], 10), suffix = m[2] || "", dur = 1500, start = null;
+      el.textContent = "0" + suffix;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(step); else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(step);
+    };
+    var runStats = function () { Array.prototype.forEach.call(stats, animateStat); };
+    var group = stats[0].closest(".hero-stats");
+    if ("IntersectionObserver" in window && group) {
+      var so = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { runStats(); so.disconnect(); } });
+      }, { threshold: 0.4 });
+      so.observe(group);
+    } else { runStats(); }
+  }
+
+  /* ============================================================
      GALLERY + LIGHTBOX
      ============================================================ */
   var gallery = document.getElementById("gallery");
