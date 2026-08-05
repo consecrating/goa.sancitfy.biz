@@ -170,7 +170,7 @@
     // Drawer header (logo)
     var head = document.createElement("div");
     head.className = "nav-drawer-head";
-    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=19" alt="Goa Directory logo"> Goa Directory';
+    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=25" alt="Goa Directory logo"> Goa Directory';
     navLinks.insertBefore(head, navLinks.firstChild);
 
     // Close button
