@@ -478,3 +478,11 @@ footer a:hover{color:var(--brand-light)}
 .tags a:nth-of-type(4){animation-delay:.30s}
 .tags a:nth-of-type(5){animation-delay:.38s}
 @media(prefers-reduced-motion:reduce){.tags .lbl,.tags a{animation:none}}
+
+
+/* Category & area icon tiles — animated pop on hover */
+.cat .ci{transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .2s,color .2s}
+.cat:hover .ci{transform:scale(1.1) rotate(-8deg);background:var(--brand);color:#fff}
+.cat:hover .ci .ic{animation:iconPop .55s ease}
+@keyframes iconPop{0%{transform:scale(1)}45%{transform:scale(1.28) rotate(10deg)}100%{transform:scale(1) rotate(0)}}
+@media(prefers-reduced-motion:reduce){.cat:hover .ci{transform:none}.cat:hover .ci .ic{animation:none}}
