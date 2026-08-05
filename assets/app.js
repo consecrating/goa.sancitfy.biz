@@ -170,7 +170,7 @@
     // Drawer header (logo)
     var head = document.createElement("div");
     head.className = "nav-drawer-head";
-    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=10" alt="Goa Directory logo"> Goa Directory';
+    head.innerHTML = '<img class="brandmark" src="/assets/logo.png?v=11" alt="Goa Directory logo"> Goa Directory';
     navLinks.insertBefore(head, navLinks.firstChild);
 
     // Close button
@@ -294,6 +294,12 @@
   thumbs.forEach(function (t) {
     t.addEventListener("click", function () { go(parseInt(t.getAttribute("data-i"), 10) || 0); });
   });
+  // Thumbnail strip scroll buttons (prev/next)
+  var thumbsBox = document.getElementById("gthumbs");
+  var tPrev = gallery.querySelector(".gthumb-nav.prev");
+  var tNext = gallery.querySelector(".gthumb-nav.next");
+  if (thumbsBox && tPrev) tPrev.addEventListener("click", function () { thumbsBox.scrollBy({ left: -260, behavior: "smooth" }); });
+  if (thumbsBox && tNext) tNext.addEventListener("click", function () { thumbsBox.scrollBy({ left: 260, behavior: "smooth" }); });
 
   function openLb() { if (!lb) return; lbOpen = true; lb.classList.add("open"); lb.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; render(); }
   function closeLb() { if (!lb) return; lbOpen = false; lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; }
